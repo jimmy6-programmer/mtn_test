@@ -1,0 +1,30 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="Container">
+        <h3>Itike</h3>
+
+       <div class="image">
+        <img src="{% static 'img/bus.png' %}" alt="">
+       </div>
+
+       <div class="routes">
+             {{ route.from_loc }} to  {{ route.to_loc }}
+             {{ route.price }} RWF <br>
+             <form method="POST" action="{% url 'initiate_payment' route.id %}">
+                {% csrf_token %}
+                <label for="phone_number">Phone Number:</label>
+                <input type="text" id="phone_number" name="phone_number" required>
+                <button type="submit">Pay <img src="{% static 'img/mtn_icon.png' %}" alt=""></button>
+            </form>
+            
+       </div>
+    </div>
+</body>
+</html>

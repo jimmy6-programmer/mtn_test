@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #eaeaea;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.Container{
+    width: 60%;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    box-shadow:  0 5px 10px rgba(54, 55, 55, 0.9);
+    border-radius: 10px;
+}
+
+@media (max-width: 768px){
+    .Container{
+        width: 90%;
+        padding: 15px;
+    }
+}
+
+.image{
+    width: 100%;
+}
+.image img{
+    width: 350px;
+}
+
+@media (max-width: 768px){
+    .image img{
+        width: 100%;
+    }
+}
+
+.routes{
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    gap: 1rem;
+    align-items: center;
+}
+
+
+.routes a{
+    display: inline-flex;
+    justify-content: flex-start;
+    text-align: left;
+    width: 100%;
+    max-width: 150px;
+    text-decoration: none;
+}
+
+@media (max-width: 768px){
+    .routes a{
+        max-width: 100%;
+        text-align: center;
+    }
+}
+
+.route1{
+    color: rgba(8, 86, 241, 0.909);
+}
+.route2{
+   color: rgba(27, 159, 10, 0.9);
+}
+
+.routes a span:hover{
+   font-size: 20px;
+   color: red;
+}
+
+h3{
+    font-size: 25px;
+}
+
+form button img{
+    width: 70px;
+    height: 70px;
+    margin-left: 40px;
+    border-radius: 10px;
+}
+
+
+
+@media (max-width: 768px){
+    .routes form img{
+        margin-left: 100px;
+    }
+}
